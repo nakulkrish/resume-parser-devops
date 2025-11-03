@@ -1,0 +1,20 @@
+{
+    "name": "nakul krishnan sudhakar",
+    "email": "nakulkrishnan04@gmail.com",
+    "top_skills": [
+        "machine learning",
+        "internship",
+        "python",
+        "sql",
+        "react"
+    ],
+    "predicted_domain": "Computer Science",
+    "score": 100,
+    "score_breakdown": {
+        "skills": 30,
+        "projects": 25,
+        "certifications": 15,
+        "experience": 10,
+        "formatting": 20
+    }
+}

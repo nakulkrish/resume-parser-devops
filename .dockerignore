@@ -1,0 +1,63 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# -----------------------------
+# Virtual Environments
+# -----------------------------
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+
+# -----------------------------
+# Jupyter Notebooks
+# -----------------------------
+.ipynb_checkpoints
+
+# -----------------------------
+# Git
+# -----------------------------
+.git/
+.gitignore
+
+# -----------------------------
+# Editors / IDEs
+# -----------------------------
+.vscode/
+.idea/
+*.swp
+
+# -----------------------------
+# OS / System Files
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Documentation / Logs / Data
+# -----------------------------
+*.log
+*.md
+*.pdf
+*.json
+*.csv
+*.xlsx
+
+# -----------------------------
+# Custom Project Output (if any)
+# -----------------------------
+output/
+uploads/
+data/
+tmp/
