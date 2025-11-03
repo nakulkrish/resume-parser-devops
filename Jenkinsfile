@@ -3,8 +3,8 @@ pipeline {
     
     environment {
         DOCKER_HUB_CREDENTIALS = credentials('dockerhub-creds')
-        DOCKER_IMAGE = 'YOUR_DOCKERHUB_USERNAME/resume-parser'
-        APP_SERVER = 'ubuntu@YOUR_APP_SERVER_IP'
+        DOCKER_IMAGE = 'nakulkrishnan/resume-parser'
+        APP_SERVER = 'ubuntu@3.80.43.27'
         AWS_REGION = 'us-east-1'
     }
     
@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo '📥 Checking out code from GitHub...'
                 git branch: 'main',
-                    url: 'https://github.com/YOUR_USERNAME/YOUR_REPO.git'
+                    url: 'https://github.com/nakulkrish/resume-parser-devops.git'
                 echo '✅ Code checked out successfully'
             }
         }
