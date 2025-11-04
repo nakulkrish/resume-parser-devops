@@ -30,6 +30,20 @@ pipeline {
                 }
             }
         }
+
+        stage('Run Unit Tests') {
+            steps {
+                script {
+                    echo '🧪 Running unit tests...'
+                    sh """
+                        # Run tests inside Docker container
+                        docker run --rm ${DOCKER_IMAGE}:${BUILD_NUMBER} \
+                            pytest tests/ -v --tb=short
+                    """
+                    echo '✅ All tests passed'
+                }
+            }
+        }
         
         stage('Test Docker Image') {
             steps {
