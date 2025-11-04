@@ -9,14 +9,17 @@ RUN apt-get update && apt-get install -y \
     python3-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements file
+# Copy requirements file first (for Docker layer caching)
 COPY requirements.txt .
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application code
+# Copy ALL application code (this is critical!)
 COPY . .
+
+# Set PYTHONPATH so Python can find app.py
+ENV PYTHONPATH=/app
 
 # Create uploads directory
 RUN mkdir -p uploads

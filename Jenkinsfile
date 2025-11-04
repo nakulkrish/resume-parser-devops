@@ -34,13 +34,12 @@ pipeline {
         stage('Run Unit Tests') {
             steps {
                 script {
-                    echo '🧪 Running unit tests...'
+                    echo '🧪 Running unit tests with pytest...'
                     sh """
-                        # Run tests inside Docker container
                         docker run --rm ${DOCKER_IMAGE}:${BUILD_NUMBER} \
-                            pytest tests/ -v --tb=short
+                            python -m pytest tests/ -v --tb=short
                     """
-                    echo '✅ All tests passed'
+                    echo '✅ All tests passed!'
                 }
             }
         }
